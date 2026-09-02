@@ -10,7 +10,9 @@
  */
 
 #include "kernel.h"
-#include <malloc.h>
+#if defined(_WIN32)
+#include <malloc.h>   /* _aligned_malloc/_aligned_free; POSIX gets them from win32_compat.h */
+#endif
 
 /* ============================================================================
  * Helper: Xbox protect flags → Win32 protect flags

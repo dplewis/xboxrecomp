@@ -198,6 +198,8 @@ BOOL  QueryPerformanceFrequency(PLARGE_INTEGER freq);
 VOID  OutputDebugStringA(LPCSTR str);
 VOID  OutputDebugStringW(LPCWSTR str);
 VOID  ExitProcess(UINT exitCode);
+BOOL  IsDebuggerPresent(void);
+VOID  DebugBreak(void);
 BOOL  TerminateProcess(HANDLE process, UINT exitCode);
 VOID  SecureZeroMemory(PVOID ptr, SIZE_T cnt);
 unsigned int _clearfp(void);   /* clear pending FPU exception flags */
@@ -361,6 +363,7 @@ int   WideCharToMultiByte(UINT cp, DWORD flags, LPCWSTR wide, int wideCount,
 #define ERROR_INSUFFICIENT_BUFFER     122u
 #define ERROR_ALREADY_EXISTS          183u
 #define ERROR_MORE_DATA               234u
+#define ERROR_NOT_OWNER               288u
 #define ERROR_MR_MID_NOT_FOUND        317u
 #define ERROR_IO_PENDING              997u
 #define ERROR_CANCELLED               1223u
