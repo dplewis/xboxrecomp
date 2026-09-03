@@ -164,6 +164,7 @@ The recompiler output (`tools/recomp`) generates these automatically. The xboxre
 ### Prerequisites
 
 - **Windows 11/10** (D3D11 backend) — or **Linux** (OpenGL backend; `tools/linux/install_deps.sh`)
+- **macOS**: install the required native libraries with `brew install sdl2 libepoxy`
 - **Python 3.10+** with `capstone` (`pip install capstone`)
 - **Visual Studio 2022** (MSVC compiler)
 - **CMake 3.20+**
